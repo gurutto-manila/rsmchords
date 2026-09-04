@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { PanelLeft, Sun, Moon, Lightbulb, Maximize2, Minimize2, Coffee, Music, Folder, ListMusic, ClipboardList, Newspaper, ShieldCheck, ArrowUpRight } from 'lucide-react';
+import { PanelLeft, Sun, Moon, Lightbulb, Maximize2, Minimize2, Music, Folder, ListMusic, ClipboardList, Newspaper, ShieldCheck, ArrowUpRight } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useBands } from '../context/BandsContext';
@@ -93,9 +93,6 @@ export default function Layout({ children }: Props) {
     if (typeof document === 'undefined') return false;
     return Boolean(document.fullscreenElement);
   });
-  const [coffeeOpen, setCoffeeOpen] = useState(false);
-  const coffeePopoverRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const mainEl = mainContentRef.current;
     if (!mainEl) return;
@@ -412,30 +409,6 @@ export default function Layout({ children }: Props) {
     rootStyle.setProperty('--bands-hue-contrast', contrast);
   }, [dark, themedBandId]);
 
-  useEffect(() => {
-    if (!coffeeOpen) return;
-
-    const handleWindowClick = (event: MouseEvent) => {
-      if (!coffeePopoverRef.current) return;
-      if (coffeePopoverRef.current.contains(event.target as Node)) return;
-      setCoffeeOpen(false);
-    };
-
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setCoffeeOpen(false);
-      }
-    };
-
-    window.addEventListener('mousedown', handleWindowClick);
-    window.addEventListener('keydown', handleEscape);
-
-    return () => {
-      window.removeEventListener('mousedown', handleWindowClick);
-      window.removeEventListener('keydown', handleEscape);
-    };
-  }, [coffeeOpen]);
-
   return (
     <>
       {isDemoMode ? (
@@ -474,60 +447,6 @@ export default function Layout({ children }: Props) {
           <BrandMark size={35} scale={1} />
         </Link>
         <nav className="topbar-nav">
-          <div className="topbar-coffee" ref={coffeePopoverRef}>
-            <button
-              type="button"
-              onClick={() => setCoffeeOpen((current) => !current)}
-              className={['topbar-coffee-trigger', coffeeOpen ? 'active' : ''].filter(Boolean).join(' ')}
-              title="Buy me a coffee"
-              aria-label="Buy me a coffee"
-              aria-expanded={coffeeOpen}
-              aria-haspopup="dialog"
-              aria-controls="topbar-coffee-popover"
-            >
-              <Coffee size={16} />
-              <span className="topbar-link-label">Buy me a coffee</span>
-            </button>
-
-            {coffeeOpen ? (
-              <div id="topbar-coffee-popover" className="topbar-coffee-popover" role="dialog" aria-label="Buy me a coffee">
-                <div className="topbar-coffee-popover-header">
-                  <img
-                    src="/assets/developer.jpg"
-                    alt=""
-                    className="topbar-coffee-popover-avatar"
-                    aria-hidden="true"
-                  />
-                  <div>
-                    <h2>Buy me a coffee</h2>
-                    <p>Support the upstream developer</p>
-                  </div>
-                </div>
-                <div className="topbar-coffee-popover-content">
-                  <div className="topbar-coffee-options">
-                    <a
-                      href="https://qr.vipps.no/box/26128ed0-008f-4b5a-bd8d-9a936f58cf83/pay-in"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="topbar-coffee-option setlist-action-btn setlist-action-btn--accent"
-                    >
-                      <span className="topbar-coffee-option-label">Vipps me</span>
-                      <ArrowUpRight size={15} />
-                    </a>
-                    <a
-                      href="https://buymeacoffee.com/blindpassasjer"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="topbar-coffee-option setlist-action-btn setlist-action-btn--secondary"
-                    >
-                      <span className="topbar-coffee-option-label">Buy me a coffee</span>
-                      <ArrowUpRight size={15} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ) : null}
-          </div>
           <button
             type="button"
             onClick={cycleTheme}
