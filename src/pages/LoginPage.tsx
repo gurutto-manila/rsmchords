@@ -11,33 +11,33 @@ const REPO_URL = 'https://github.com/gurutto-manila/rsmchords/tree/rsm-configs';
 const LOGIN_FEATURES: { icon: LucideIcon; title: string; description: string }[] = [
   {
     icon: Music2,
-    title: 'Song library',
-    description: 'Chord charts, tabs, lyrics, and hand notes in one place.',
+    title: 'Worship song library',
+    description: 'Keep chord charts, lyrics, arrangements, and ministry notes in one place.',
   },
   {
     icon: ListMusic,
     title: 'Setlists',
-    description: 'Build sets fast, with rehearsal and concert modes.',
+    description: 'Prepare worship services with rehearsal and live presentation modes.',
   },
   {
     icon: Users,
-    title: 'Band collaboration',
-    description: 'A shared workspace for every member of the band.',
+    title: 'Ministry collaboration',
+    description: 'Give every authorized worship team member access to the same resources.',
   },
   {
     icon: MonitorSpeaker,
-    title: 'Stage plots & riders',
-    description: 'Stage diagrams, tech riders, and input lists.',
+    title: 'Stage and audio planning',
+    description: 'Organize stage diagrams, technical notes, and input lists.',
   },
   {
     icon: Newspaper,
-    title: 'Press kits',
-    description: 'Band bio, photos, and assets behind a single link.',
+    title: 'Ministry media',
+    description: 'Keep team information, photos, and shared media organized.',
   },
   {
     icon: Activity,
     title: 'Tuner & metronome',
-    description: 'Chromatic tuner, metronome, and rehearsal recordings.',
+    description: 'Use the tuner, metronome, and recordings during worship rehearsals.',
   },
 ];
 
@@ -71,11 +71,11 @@ function LoginHero() {
   return (
     <aside className="login-hero" aria-label="RSMChords features">
       <div className="login-brand login-brand--hero">
-        <BrandMark size={90} />
+        <BrandMark size={72} />
       </div>
-      <h1 className="login-hero-title">A workspace for RSM Music Team.</h1>
+      <h1 className="login-hero-title">One shared songbook for RSM Church.</h1>
       <p className="login-hero-copy">
-        RSM Church Music Ministry uses this platform to organize songs, worship setlists, rehearsals, and other resources needed for our church services and ministry activities. This is a private, self-hosted system intended for authorized ministry members only.
+        RSMChords helps our Music Ministry prepare songs, worship setlists, rehearsals, and technical resources for every church service. This private system is available only to authorized RSM Church ministry members.
       </p>
       <ul className="login-feature-list">
         {LOGIN_FEATURES.map(({ icon: Icon, title, description }) => (
@@ -271,7 +271,7 @@ export default function LoginPage() {
           </form>
 
           <footer className="footer">
-            Customized by: Machael Gregorio 
+            Customized for RSM Church by Machael Gregorio
           </footer>
         </div>
       </div>

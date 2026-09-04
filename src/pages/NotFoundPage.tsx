@@ -9,7 +9,7 @@ export default function NotFoundPage() {
       <h1>Page not found</h1>
       <p>The page you're looking for doesn't exist or may have moved.</p>
       <Link to="/" className="btn-primary" style={{ display: 'inline-block', marginTop: '1rem' }}>
-        Go to Gigboy
+        Go to RSMChords
       </Link>
     </div>
   );

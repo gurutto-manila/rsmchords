@@ -34,7 +34,7 @@ export function renderPressKitOgHtml(indexHtml: string, data: PublicPressKitData
   const title = escapeHtml(`${data.bandName} — Press Kit`);
   const descriptionSource = data.kit.richText ?? '';
   const description = escapeHtml(
-    stripHtml(descriptionSource).slice(0, 200) || `Press kit and media for ${data.bandName}, shared via GIGBOY.`,
+    stripHtml(descriptionSource).slice(0, 200) || `Ministry media for ${data.bandName}, shared via RSMChords.`,
   );
   const rawImage = data.bandLogo ?? data.images[0]?.url ?? `${origin}/pwa-512.png`;
   const image = escapeHtml(rawImage.startsWith('http') ? rawImage : `${origin}${rawImage}`);

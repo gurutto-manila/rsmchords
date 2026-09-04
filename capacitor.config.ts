@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.gigboy.app',
-  appName: 'GIGBOY',
+  appName: 'RSMChords',
   webDir: 'dist'
 };
 

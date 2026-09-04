@@ -160,5 +160,5 @@ app.use((err: unknown, _req: express.Request, res: express.Response, _next: expr
 startSessionCleanup();
 
 app.listen(PORT, () => {
-  console.log(`Gigboy self-host server listening on port ${PORT}`);
+  console.log(`RSMChords server listening on port ${PORT}`);
 });

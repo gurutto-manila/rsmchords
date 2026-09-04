@@ -42,12 +42,12 @@ export async function parseImportedPressKitFile(file: File): Promise<ImportedPre
   }
 
   if (typeof parsed !== 'object' || parsed === null) {
-    throw new Error('This file is not a gigboy press kit export.');
+    throw new Error('This file is not a compatible RSMChords press kit export.');
   }
 
   const record = parsed as Record<string, unknown>;
   if (record.type !== 'gigboy.pressKit') {
-    throw new Error('This file is not a gigboy press kit export.');
+    throw new Error('This file is not a compatible RSMChords press kit export.');
   }
 
   const fallbackName = fileNameToName(file.name);

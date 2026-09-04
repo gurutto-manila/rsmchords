@@ -8,7 +8,7 @@
 export function getMicrophoneUnavailableReason(): string | null {
   if (typeof navigator === 'undefined' || !navigator.mediaDevices?.getUserMedia) {
     if (typeof window !== 'undefined' && !window.isSecureContext) {
-      return 'Microphone access requires a secure connection (HTTPS). This page is loaded over plain HTTP, so the browser blocks it — put a reverse proxy with HTTPS in front of Gigboy to use this feature.';
+      return 'Microphone access requires a secure connection (HTTPS). This page is loaded over plain HTTP, so the browser blocks it — put a reverse proxy with HTTPS in front of RSMChords to use this feature.';
     }
     return 'Microphone access is not available in this browser.';
   }

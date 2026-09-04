@@ -87,8 +87,8 @@ export default function BandManagementPanel({
     if (!lastInviteLink) return;
     try {
       await navigator.share({
-        title: `Join ${band.name} on Gigboy`,
-        text: `You're invited to join ${band.name} on Gigboy.`,
+        title: `Join ${band.name} on RSMChords`,
+        text: `You're invited to join the ${band.name} ministry workspace on RSMChords.`,
         url: lastInviteLink,
       });
     } catch (error) {

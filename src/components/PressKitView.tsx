@@ -563,7 +563,7 @@ export default function PressKitView({ bandId, bandName, kit, canEdit, userId, u
     const fileArray = Array.from(files ?? []);
     const jsonFile = findPressKitJsonFile(fileArray);
     if (!jsonFile) {
-      toast.error('Select the kit.json file from a gigboy press kit export (optionally along with its images).', { duration: 8000 });
+      toast.error('Select the kit.json file from an RSMChords press kit export (optionally along with its images).', { duration: 8000 });
       return;
     }
 

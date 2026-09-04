@@ -87,7 +87,7 @@ function RootRedirect() {
   const { bands, loading } = useBands();
 
   if (loading) {
-    return <div className="app-status">Loading Gigboy…</div>;
+    return <div className="app-status">Loading RSMChords…</div>;
   }
 
   let targetBandId: string | null = null;
@@ -123,7 +123,7 @@ function AuthenticatedApp() {
   const { user, loading, authEnabled, isDeletingAccount } = useAuth();
 
   if (loading) {
-    return <div className="app-status">Loading Gigboy…</div>;
+    return <div className="app-status">Loading RSMChords…</div>;
   }
 
   if (authEnabled && !user) return <LoginPage />;
@@ -209,7 +209,7 @@ function AppContent() {
           }}
           position="top-center"
         />
-        <Suspense fallback={<div className="app-status">Loading Gigboy…</div>}>
+        <Suspense fallback={<div className="app-status">Loading RSMChords…</div>}>
           <RouterProvider router={router} />
         </Suspense>
       </AuthProvider>

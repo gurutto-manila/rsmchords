@@ -237,21 +237,21 @@ export default function ProfilePage() {
           <div className="profile-welcome-card-icon">
             <Sparkles size={22} />
           </div>
-          <h2>Welcome to Gigboy!</h2>
+          <h2>Welcome to RSMChords!</h2>
           <p>
-            Gigboy is your digital songbook for musicians. Add songs in ChordPro format,
-            organize them into setlists, and use concert mode on stage.
+            RSMChords is the shared digital songbook for RSM Church Music Ministry. Add worship
+            songs in ChordPro format, organize service setlists, and use concert mode while leading.
           </p>
           <p className="profile-welcome-card-cta">
-            👉 Start by naming your first workspace — solo artist or full band, either works.
+            👉 Start by naming your ministry or worship team workspace.
           </p>
           <form className="profile-welcome-card-form" onSubmit={handleCreateFirstBand}>
             <input
               type="text"
               value={newBandName}
               onChange={(e) => setNewBandName(e.target.value)}
-              placeholder="Band or artist name..."
-              aria-label="Band or artist name"
+              placeholder="Ministry or worship team name..."
+              aria-label="Ministry or worship team name"
               disabled={busyCreateBand}
               autoFocus
             />

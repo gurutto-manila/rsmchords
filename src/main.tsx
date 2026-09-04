@@ -50,7 +50,7 @@ async function setupPwa() {
   registerSW({
     immediate: true,
     onOfflineReady() {
-      console.info('GIGBOY is ready to work offline.')
+      console.info('RSMChords is ready to work offline.')
     },
     // A SPA tab left open never re-fetches sw.js on its own — browsers only
     // check for a new SW on navigation or ~once per 24h. Poll explicitly so

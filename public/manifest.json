@@ -1,7 +1,7 @@
 {
-  "name": "GIGBOY",
-  "short_name": "GIGBOY",
-  "description": "Your songs. Your stage.",
+  "name": "RSMChords",
+  "short_name": "RSMChords",
+  "description": "Worship songs and ministry resources for RSM Church.",
   "icons": [
     {
       "src": "/icon.png",

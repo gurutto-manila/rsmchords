@@ -1,6 +1,6 @@
-# Self-hosting Gigboy
+# Self-hosting RSMChords
 
-Gigboy is self-hosted only: run your own copy on your own infrastructure with Docker Compose.
+RSMChords is self-hosted for RSM Church: run it on church-controlled infrastructure with Docker Compose.
 There is no hosted SaaS version, and no third-party account (Firebase, Stripe, Cloudflare) is
 involved anywhere in the stack — it's just this app, a Postgres database, and a volume for
 uploaded files.
@@ -90,7 +90,7 @@ uploaded files.
 
 ## Admin account and invites
 
-Gigboy has no open self-registration. The first account is bootstrapped from environment
+RSMChords has no open self-registration. The first account is bootstrapped from environment
 variables, and every account after that is created by an admin generating an invite link.
 
 **Bootstrapping the first admin** — set both `ADMIN_EMAIL` and `ADMIN_PASSWORD` in `.env`
@@ -166,7 +166,7 @@ to 20MB — Express itself already accepts them.
 The setlist "now playing" sync uses Server-Sent Events on
 `/api/bands/*/setlists/*/session/stream`. If your proxy buffers responses (nginx does by
 default), followers' screens will lag or not update — disable buffering for that path, e.g.
-nginx `proxy_buffering off;` (Gigboy already sends `X-Accel-Buffering: no`, which nginx
+nginx `proxy_buffering off;` (RSMChords already sends `X-Accel-Buffering: no`, which nginx
 honours) and make sure the proxy read timeout is longer than the 25s keepalive.
 
 ## Updating

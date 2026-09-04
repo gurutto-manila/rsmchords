@@ -90,9 +90,9 @@ export default defineConfig(({ command }) => ({
         'icon.png',
       ],
       manifest: {
-        name: 'GIGBOY',
-        short_name: 'GIGBOY',
-        description: 'Your songs. Your stage.',
+        name: 'RSMChords',
+        short_name: 'RSMChords',
+        description: 'Worship songs and ministry resources for RSM Church.',
 
         theme_color: '#1a6fc4',
         background_color: '#ffffff',

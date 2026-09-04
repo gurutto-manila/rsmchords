@@ -35,12 +35,12 @@ export async function parseImportedSongListFile(file: File): Promise<ImportedSon
   }
 
   if (typeof parsed !== 'object' || parsed === null) {
-    throw new Error('This file is not a gigboy songlist export.');
+    throw new Error('This file is not a compatible RSMChords songlist export.');
   }
 
   const record = parsed as Record<string, unknown>;
   if (record.type !== 'gigboy.songlist') {
-    throw new Error('This file is not a gigboy songlist export.');
+    throw new Error('This file is not a compatible RSMChords songlist export.');
   }
 
   const fallbackName = fileNameToName(file.name);

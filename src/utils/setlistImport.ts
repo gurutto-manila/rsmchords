@@ -35,12 +35,12 @@ export async function parseImportedSetlistFile(file: File): Promise<ImportedSetl
   }
 
   if (typeof parsed !== 'object' || parsed === null) {
-    throw new Error('This file is not a gigboy setlist export.');
+    throw new Error('This file is not a compatible RSMChords setlist export.');
   }
 
   const record = parsed as Record<string, unknown>;
   if (record.type !== 'gigboy.setlist') {
-    throw new Error('This file is not a gigboy setlist export.');
+    throw new Error('This file is not a compatible RSMChords setlist export.');
   }
 
   const fallbackName = fileNameToName(file.name);

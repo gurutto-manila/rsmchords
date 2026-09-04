@@ -308,7 +308,7 @@ async function addRecordingsFolder(
 
 /**
  * Bundles every band a user belongs to into a single ZIP, so nothing is
- * locked into gigboy's own storage. Songs export as plain ChordPro/text
+ * locked into RSMChords' own storage. Songs export as plain ChordPro/text
  * files; recordings, press kit images, technical riders, and press kits
  * export as their native files.
  */
@@ -349,12 +349,12 @@ export async function buildSongbookExportZip(input: SongbookExportInput): Promis
   zip.file(
     'README.txt',
     [
-      'GIGBOY export',
+      'RSMChords export',
       `Generated: ${generatedAt}`,
       '',
       'Each song is a plain ChordPro (.cho) file — chords in [brackets] above the lyrics they belong to.',
       'Songlists, setlists, technical riders, and press kits each ship as a human-readable .txt/.html',
-      'file AND a matching .json file — the .json can be re-imported into gigboy from that item\'s',
+      'file AND a matching .json file — the .json can be re-imported into RSMChords from that item\'s',
       'page (Songlists, Setlists, Riders, Press Kits); the .txt/.html is just for reading by eye.',
       'Recordings are exported as their original audio files, grouped by song.',
       'Press kit images live in each band\'s images/ folder.',
@@ -366,5 +366,5 @@ export async function buildSongbookExportZip(input: SongbookExportInput): Promis
 }
 
 export function triggerSongbookExportDownload(blob: Blob): void {
-  void saveBlob(blob, `gigboy-export-${new Date().toISOString().slice(0, 10)}.zip`);
+  void saveBlob(blob, `rsmchords-export-${new Date().toISOString().slice(0, 10)}.zip`);
 }

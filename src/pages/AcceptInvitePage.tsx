@@ -134,7 +134,7 @@ export default function AcceptInvitePage() {
         <div className="login-brand">
           <BrandMark size={28} />
         </div>
-        <h1 className="login-title">Join GIGBOY</h1>
+        <h1 className="login-title">Join RSMChords</h1>
         <p className="login-description">
           {lookup.invite.email
             ? `You've been invited as ${lookup.invite.email}. Create your account below.`

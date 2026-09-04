@@ -5,7 +5,7 @@
 /* ─── Reset & tokens ────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* GIGBOY's theme is built entirely on CSS color-mix(), which needs Safari/iOS 16.2+,
+/* RSMChords' theme is built entirely on CSS color-mix(), which needs Safari/iOS 16.2+,
    Chrome 111+, Firefox 113+. On anything older the app renders nearly unstyled, so show
    a plain notice instead. Uses only ancient CSS properties so it survives on old engines. */
 #legacy-browser-notice { display: none; }
@@ -350,28 +350,20 @@ input, select, textarea { font: inherit; color: var(--text); }
   font-family: 'Barlow Condensed', sans-serif;
   letter-spacing: .01em;
   line-height: 1;
-  text-transform: uppercase;
   transform: scale(1.25);
   transform-origin: left center;
   display: inline-block;
 }
 
-.brand-name-gig {
+.brand-name-rsm {
   font-weight: 900;
   color: var(--accent);
 }
 
-.brand-name-boy {
+.brand-name-chords {
   font-weight: 300;
   color: var(--text);
-  opacity: 0.75;
-}
-
-.brand-name-mirror-g {
-  font-weight: 900;
-  color: var(--accent);
-  transform: scaleX(-1);
-  display: inline-block;
+  opacity: 0.82;
 }
 
 

@@ -1,9 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-  <g>
-    <text x="13" y="24" text-anchor="middle" dominant-baseline="middle" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-weight="900" font-size="30" fill="#1a6fc4">G</text>
-    <text x="24" y="24" text-anchor="middle" dominant-baseline="middle" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-weight="900" font-size="30" fill="#1a6fc4">I</text>
-    <g transform="translate(35 24) scale(-1 1)">
-      <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-weight="900" font-size="30" fill="#1a6fc4">G</text>
-    </g>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title">
+  <title id="title">RSMChords</title>
+  <rect width="48" height="48" rx="11" fill="#1a6fc4" />
+  <text x="24" y="25" text-anchor="middle" dominant-baseline="middle" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-weight="900" font-size="18" letter-spacing="-.5" fill="#fff">RSM</text>
 </svg>

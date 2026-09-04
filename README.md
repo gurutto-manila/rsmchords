@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="icon.png" width="96" height="96" alt="Gigboy logo" />
+  <img src="public/favicon.svg" width="96" height="96" alt="RSMChords logo" />
 </p>
 
-<h1 align="center">Gigboy</h1>
+<h1 align="center">RSMChords</h1>
 
 <p align="center">
-  <strong>The songbook and gig-prep app for bands who'd rather own their data than rent it.</strong>
+  <strong>The private worship songbook and ministry workspace for RSM Church.</strong>
 </p>
 
 <p align="center">
@@ -26,11 +26,10 @@
 
 ---
 
-Gigboy is a web app for musicians and bands to write, organize, and rehearse songs from — built
-on the open **ChordPro** format, so nothing you write is ever locked into a proprietary format or
-someone else's server. It's **self-hosted only**: you run it on your own machine, NAS, or VPS with
-one Docker Compose command, and your band's setlists, recordings, and press kit live in your own
-database, not a startup's.
+RSMChords is a church-customized fork of Gigboy for RSM Church Music Ministry. It gives authorized
+ministry members one place to prepare worship songs, service setlists, rehearsals, recordings, and
+technical resources. Songs use the open **ChordPro** format, and the entire system is self-hosted so
+RSM Church retains control of its ministry data.
 
 No subscriptions, no per-seat pricing, no feature paywalls — every account gets full access.
 
@@ -65,24 +64,24 @@ self-hosted only (see below).
   bandmate keeps their own
 - **Live preview** while writing — see the rendered sheet as you type
 - **Import** from ChordPro, OnSong, and pasted Ultimate Guitar / Chordify / CifraClub charts —
-  drop in loose files or a whole `.zip` backup and Gigboy converts them to ChordPro
+  drop in loose files or a whole `.zip` backup and RSMChords converts them to ChordPro
 - **Print / PDF export** — a setlist as a single large-type sheet, or the full charts one song per page
 - **Search & filter** by title, artist, tag, or language — across English, Norwegian, Spanish,
   Portuguese, French, Italian, German, and more
 
-### Built for bands, not solo users bolted onto a band feature later
-- **Shared song libraries** — every song, songlist, and setlist belongs to the band, with
-  per-member editor/viewer roles and invite links to bring people in
-- **Setlists & songlists** — ordered setlists for the actual gig, freeform songlists for
+### Built for worship teams and shared ministry preparation
+- **Shared song libraries** — every song, songlist, and setlist belongs to the ministry workspace,
+  with per-member editor/viewer roles and controlled invite links
+- **Setlists & songlists** — ordered setlists for services, freeform songlists for
   everything else
-- **Now-playing sync** — one device leads Concert Mode and the whole band's screens follow
+- **Now-playing sync** — one device leads Concert Mode and the whole worship team's screens follow
   to the same song, page, and transpose
 - **Trash & restore** — soft-deleted songs, songlists, setlists, and press kits recover for
   30 days before they're gone for good
 - **Edit history** — every save is snapshotted; see who changed which line, diff any two
   versions, and restore an older one
 
-### Everything you need before you walk on stage
+### Everything you need before a worship service
 - **Press kits, technical riders, stage plots** — build them once, share via a public link, with
   OG-tag previews that look right when pasted into a booking email or Discord
 - **Band logo upload** — used across the press kit and public pages
@@ -118,7 +117,7 @@ self-hosted only (see below).
 
 ## Browser support
 
-Gigboy targets current evergreen browsers. The minimum is **Safari 16.2 / iOS 16.2**,
+RSMChords targets current evergreen browsers. The minimum is **Safari 16.2 / iOS 16.2**,
 **Chrome 111**, or **Firefox 113** — the UI is built on CSS `color-mix()` and older engines
 render it unstyled (they get a "please update" notice instead). Audio recording, the
 metronome and the tuner use the Web Audio and MediaRecorder APIs; on iOS those require the
@@ -126,7 +125,7 @@ page to be served over HTTPS.
 
 ## Quick start (self-hosting)
 
-Gigboy ships as a prebuilt Docker image — no build toolchain required on the machine running it,
+RSMChords can use the upstream prebuilt image or build this customized fork locally with Docker,
 which matters if that machine is a NAS or another low-power box. See
 **[SELFHOSTING.md](SELFHOSTING.md)** for the full guide, including the admin account bootstrap
 and invite-link flow used to add users (there's no open self-registration).
@@ -158,7 +157,7 @@ ADMIN_PASSWORD=
 ```
 
 Open [http://localhost:6168](http://localhost:6168) (or whatever `PORT` you set in `.env`) and log in
-with the admin account you configured. From there, generate invite links to bring your bandmates in
+with the admin account you configured. From there, generate invite links for authorized ministry members
 — every new account is a regular member by default; grant admin access to specific people
 afterward from the Users tab if you need to.
 

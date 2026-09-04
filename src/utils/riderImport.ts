@@ -40,12 +40,12 @@ export async function parseImportedRiderFile(file: File): Promise<ImportedRiderD
   }
 
   if (typeof parsed !== 'object' || parsed === null) {
-    throw new Error('This file is not a gigboy technical rider export.');
+    throw new Error('This file is not a compatible RSMChords technical rider export.');
   }
 
   const record = parsed as Record<string, unknown>;
   if (record.type !== 'gigboy.technicalRider') {
-    throw new Error('This file is not a gigboy technical rider export.');
+    throw new Error('This file is not a compatible RSMChords technical rider export.');
   }
 
   const fallbackName = fileNameToName(file.name);

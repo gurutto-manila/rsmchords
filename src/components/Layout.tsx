@@ -444,7 +444,7 @@ export default function Layout({ children }: Props) {
             You're viewing a live demo with sample data — nothing leaves your browser.
           </span>
           <a
-            href="https://github.com/blindpassasjer/gigboy"
+            href="https://github.com/gurutto-manila/rsmchords/tree/rsm-configs"
             target="_blank"
             rel="noreferrer"
             className="demo-banner-link"
@@ -500,7 +500,7 @@ export default function Layout({ children }: Props) {
                   />
                   <div>
                     <h2>Buy me a coffee</h2>
-                    <p>Support keeps Gigboy running</p>
+                    <p>Support the upstream developer</p>
                   </div>
                 </div>
                 <div className="topbar-coffee-popover-content">

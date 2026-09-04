@@ -271,8 +271,8 @@ function seed(): DemoState {
 
   const band: Band = {
     id: DEMO_BAND_ID,
-    name: 'The Gigboy Demo Band',
-    description: 'A sample band so you can see how Gigboy feels before you self-host it.',
+    name: 'RSM Worship Team',
+    description: 'A sample worship team workspace demonstrating how RSMChords supports church ministry.',
     icon: '🎸',
     ownerId: DEMO_USER_ID,
     memberIds: [DEMO_USER_ID, OTHER_MEMBER_ID],
@@ -292,7 +292,7 @@ function seed(): DemoState {
   const setlists: Setlist[] = [
     {
       id: genId('setlist'),
-      name: 'Saturday Night Gig',
+      name: 'Sunday Worship Service',
       songIds: songs.slice(0, 4).map((s) => s.id),
       songNotes: { [songs[0].id]: 'Open acoustic, no drums' },
       createdAt: now(),
@@ -321,8 +321,8 @@ function seed(): DemoState {
       id: genId('presskit'),
       name: 'Electronic Press Kit',
       richText:
-        '<p>The Gigboy Demo Band is a traditional folk outfit playing timeless songs with modern warmth. ' +
-        'Available for weddings, festivals, and listening rooms.</p>',
+        '<p>RSM Worship Team serves the church through congregational worship, careful preparation, ' +
+        'and Christ-centered music ministry.</p>',
       imageIds: [],
       videoUrls: [],
       selectedVideoUrls: [],
