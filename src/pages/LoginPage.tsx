@@ -69,7 +69,7 @@ function getPostLoginDestination(location: Location): { path: string; state?: un
 
 function LoginHero() {
   return (
-    <aside className="login-hero" aria-label="GIGBOY features">
+    <aside className="login-hero" aria-label="RSMChords features">
       <div className="login-brand login-brand--hero">
         <BrandMark size={90} />
       </div>
