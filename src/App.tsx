@@ -11,6 +11,7 @@ import { isDynamicImportFailure, recoverFromDynamicImportFailure, forceReloadAft
 const Layout = lazy(() => import('./components/Layout'));
 const LoginPage = lazy(() => import('./pages/LoginPage'));
 const AcceptInvitePage = lazy(() => import('./pages/AcceptInvitePage'));
+const BandInvitePage = lazy(() => import('./pages/BandInvitePage'));
 const UsernameSetupPage = lazy(() => import('./pages/UsernameSetupPage'));
 const AddSongPage = lazy(() => import('./pages/AddSongPage'));
 const BandSetlistConcertPage = lazy(() => import('./pages/BandSetlistConcertPage'));
@@ -174,6 +175,12 @@ const router = createBrowserRouter(
     { path: '/public/bands/:bandId/riders/:riderId', element: <PublicBandRiderPage />, errorElement: routerErrorElement },
     { path: '/public/press-kit/:token', element: <PublicBandPressKitPage />, errorElement: routerErrorElement },
     { path: '/invite/:token', element: <AcceptInvitePage />, errorElement: routerErrorElement },
+
+    // Band membership invitations.
+    // Keep /profile/invites for backwards compatibility with invite links
+    // generated before the dedicated /band-invite/:token route was added.
+    { path: '/band-invite/:token', element: <BandInvitePage />, errorElement: routerErrorElement },
+    { path: '/profile/invites', element: <BandInvitePage />, errorElement: routerErrorElement },
     { path: '/', element: <AuthenticatedApp />, errorElement: routerErrorElement },
     { path: '*', element: <AuthenticatedApp />, errorElement: routerErrorElement },
   ],
