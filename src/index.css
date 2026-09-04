@@ -5729,7 +5729,7 @@ input, select, textarea { font: inherit; color: var(--text); }
   margin: 0;
   font-size: 1.4rem;
   font-weight: 700;
-  opacity: 0;
+  opacity: 1;
   text-shadow: 0 0 18px color-mix(in srgb, var(--accent) 48%, #ffffff);
   color: var(--text);
 }
@@ -6184,6 +6184,20 @@ input, select, textarea { font: inherit; color: var(--text); }
   .login-hero {
     border-radius: 16px;
     padding: .85rem;
+  }
+
+  /* The desktop wordmark is enlarged with an inline font size plus a scale
+     transform. On phones that combination is wider than the hero card and
+     clips the "Chords" half of the name. Size it from the viewport and remove
+     the extra desktop scale so the complete mark always fits. */
+  .login-brand.login-brand--hero {
+    min-width: 0;
+  }
+
+  .login-brand--hero .brand-name {
+    font-size: clamp(3.5rem, 19vw, 4.95rem) !important;
+    max-width: 100%;
+    transform: none;
   }
 
   .login-feature-list {
