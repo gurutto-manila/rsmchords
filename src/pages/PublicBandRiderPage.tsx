@@ -311,7 +311,7 @@ export default function PublicBandRiderPage() {
         ) : null}
       </div>
 
-      <footer className="footer">From Norway {'<3'} with chords</footer>
+      <footer className="footer">Customized by: Machael Gregorio </footer>
     </main>
   );
 }

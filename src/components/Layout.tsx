@@ -631,7 +631,7 @@ export default function Layout({ children }: Props) {
         >
           {children}
           <footer className="footer">
-            From Norway {'<3'} with chords
+            Customized by: Machael Gregorio
           </footer>
         </main>
         {renderContextFab()}

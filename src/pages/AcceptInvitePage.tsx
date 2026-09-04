@@ -204,7 +204,7 @@ export default function AcceptInvitePage() {
           </button>
         </form>
 
-        <footer className="footer">From Norway {'<3'} with chords</footer>
+        <footer className="footer">Customized by: Machael Gregorio </footer>
       </div>
     </div>
   );

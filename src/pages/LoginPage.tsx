@@ -272,7 +272,7 @@ export default function LoginPage() {
           </form>
 
           <footer className="footer">
-            From Norway {'<3'} with chords
+            Customized by: Machael Gregorio 
           </footer>
         </div>
       </div>
