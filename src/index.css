@@ -5617,6 +5617,10 @@ input, select, textarea { font: inherit; color: var(--text); }
   align-items: stretch;
 }
 
+.login-mobile-header {
+  display: none;
+}
+
 .login-hero {
   color: var(--text);
   background: color-mix(in srgb, var(--surface) 78%, transparent);
@@ -5732,6 +5736,13 @@ input, select, textarea { font: inherit; color: var(--text); }
   opacity: 1;
   text-shadow: 0 0 18px color-mix(in srgb, var(--accent) 48%, #ffffff);
   color: var(--text);
+}
+
+.login-card-copy {
+  margin: -.65rem 0 0;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.45;
 }
 
 .login-description {
@@ -6167,60 +6178,66 @@ input, select, textarea { font: inherit; color: var(--text); }
 
 @media (max-width: 640px) {
   .login-screen {
-    padding: .55rem;
+    place-items: start center;
+    padding: max(1.25rem, calc(var(--safe-top) + .75rem)) .75rem max(1rem, var(--safe-bottom));
   }
 
   .login-shell {
     grid-template-columns: 1fr;
-    gap: .75rem;
+    gap: 1rem;
     align-items: start;
+    max-width: 27rem;
   }
 
-  .login-hero,
-  .login-card {
+  .login-mobile-header {
+    display: flex;
     width: 100%;
-  }
-
-  .login-hero {
-    border-radius: 16px;
-    padding: .85rem;
-  }
-
-  /* The desktop wordmark is enlarged with an inline font size plus a scale
-     transform. On phones that combination is wider than the hero card and
-     clips the "Chords" half of the name. Size it from the viewport and remove
-     the extra desktop scale so the complete mark always fits. */
-  .login-brand.login-brand--hero {
     min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: .25rem;
+    padding: clamp(.5rem, 3vh, 1.5rem) .5rem .25rem;
+    text-align: center;
   }
 
-  .login-brand--hero .brand-name {
-    font-size: clamp(3.5rem, 19vw, 4.95rem) !important;
+  .login-mobile-header .brand-name {
+    font-size: clamp(3.25rem, 17vw, 4rem) !important;
     max-width: 100%;
     transform: none;
   }
 
-  .login-feature-list {
-    grid-template-columns: 1fr;
-    gap: .45rem;
+  .login-mobile-header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .82rem;
+    font-weight: 600;
+    letter-spacing: .035em;
   }
 
-  .login-feature-item {
-    padding: .5rem .6rem;
+  .login-hero {
+    display: none;
   }
 
   .login-card {
-    border-radius: 16px;
-    padding: .95rem;
-    gap: .8rem;
+    width: 100%;
+    border-radius: 20px;
+    padding: clamp(1.2rem, 5vw, 1.5rem);
+    gap: 1rem;
+    order: 1;
   }
 
   .login-title {
-    font-size: 1.12rem;
+    font-size: 1.35rem;
   }
 
-  .login-description {
+  .login-card-copy {
+    margin-top: -.65rem;
     font-size: .88rem;
+  }
+
+  .login-card .footer {
+    font-size: .78rem;
+    line-height: 1.45;
   }
 
   .login-note,

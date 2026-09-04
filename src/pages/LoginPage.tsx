@@ -237,9 +237,14 @@ export default function LoginPage() {
     <div className="login-screen">
       <LoginBackdrop />
       <div className="login-shell">
+        <header className="login-mobile-header">
+          <BrandMark size={58} />
+          <p>RSM Church Music Ministry</p>
+        </header>
         <LoginHero />
         <div className="login-card">
           <h1 className="login-title">Sign in</h1>
+          <p className="login-card-copy">Use your ministry account to continue.</p>
 
           <form className="login-form" onSubmit={handleSubmit} noValidate>
             <div className="form-field">
