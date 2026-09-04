@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext';
 import BrandMark from '../components/BrandMark';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
-const REPO_URL = 'https://github.com/blindpassasjer/gigboy';
+const REPO_URL = 'https://github.com/gurutto-manila/rsmchords/tree/rsm-configs';
 
 const LOGIN_FEATURES: { icon: LucideIcon; title: string; description: string }[] = [
   {
@@ -73,10 +73,9 @@ function LoginHero() {
       <div className="login-brand login-brand--hero">
         <BrandMark size={90} />
       </div>
-      <h1 className="login-hero-title">A workspace for working bands.</h1>
+      <h1 className="login-hero-title">A workspace for RSM Music Team.</h1>
       <p className="login-hero-copy">
-        Gigboy is a free, open-source tool for organising songs, setlists, and everything else
-        a band brings to the stage. This is a self-hosted instance — accounts are invite-only.
+        RSM Church Music Ministry uses this platform to organize songs, worship setlists, rehearsals, and other resources needed for our church services and ministry activities. This is a private, self-hosted system intended for authorized ministry members only.
       </p>
       <ul className="login-feature-list">
         {LOGIN_FEATURES.map(({ icon: Icon, title, description }) => (
