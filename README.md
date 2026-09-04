@@ -13,6 +13,7 @@
   <a href="#quick-start-self-hosting">Quick start</a> ·
   <a href="#screenshots">Screenshots</a> ·
   <a href="#features">Features</a> ·
+  <a href="docs/KNOWLEDGE-BASE.md">Knowledge base</a> ·
   <a href="SELFHOSTING.md">Self-hosting guide</a> ·
   <a href="#license">License</a>
 </p>
