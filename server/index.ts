@@ -159,6 +159,6 @@ app.use((err: unknown, _req: express.Request, res: express.Response, _next: expr
 
 startSessionCleanup();
 
-app.listen(PORT, () => {
-  console.log(`RSMChords server listening on port ${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`RSMChords server listening on 0.0.0.0:${PORT}`);
 });
